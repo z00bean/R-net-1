@@ -103,6 +103,8 @@ class Trainer(object):
                     speed = self.dataloader_train.batch_size * step_num / used_time
                     print("speed: %f examples/sec \n\n" %
                           (speed), flush=True)
+                    with open('outputlog1.txt', 'a') as f:
+                        f.write(str(batch_idx)+","+str(len(self.dataloader_train))+","+str(epoch),"loss:"+str(global_loss/step_num)+",acc:"+str(global_acc/step_num))
 
                     log_value('train/EM', global_acc / step_num, self.step)
                     log_value('train/loss', global_loss / step_num, self.step)
