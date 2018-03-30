@@ -14,7 +14,6 @@ import models.r_net as RNet
 from utils.squad_eval import evaluate
 from utils.utils import make_dirs
 
-
 def save_checkpoint(state, is_best, path, filename='checkpoint.pth.tar', best_filename='model_best.pth.tar'):
     checkpoint_regular = os.path.join(path, filename)
     checkpint_best = os.path.join(path, best_filename)
