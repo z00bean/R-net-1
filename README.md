@@ -1,1 +1,3 @@
-python3 main.py --batch_size <batch size>
+UML- NLP project
+
+  ~ python3 main.py --batch_size <batch size>
